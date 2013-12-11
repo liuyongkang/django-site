@@ -34,12 +34,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+#    'django.contrib.admin',
+#    'django.contrib.auth',
+#    'django.contrib.contenttypes',
+#    'django.contrib.sessions',
+#    'django.contrib.messages',
+#    'django.contrib.staticfiles',
+'mysite.books',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,10 +62,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'nick',
+        'PASSWORD': '1',
+        'HOST': '/var/run/mysqld/mysqld.sock',
+        'PORT': '3306',
     }
 }
+
+#DATABASE_ENGINE = 'mysql'
+#DATABASE_NAME = 'django'
+#DATABASE_USER = 'root'
+#DATABASE_PASSWORD = '2'
+#DATABASE_HOST = '/var/run/mysqld/mysqld.sock'
+#DATABASE_PORT = '3306'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
