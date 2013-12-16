@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     (r'^hello/$', hello),
     (r'^time/$', current_time),
     (r'^time/plus/(\d{1,2})/$', hours_ahead),
+    (r'^admin/', include(admin.site.urls)),
 )
 
