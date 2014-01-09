@@ -17,3 +17,7 @@ def hours_ahead(request, offset) :
     next_time = datetime.datetime.now() + datetime.timedelta(hours = offset)
     return render_to_response('hours_ahead.html', locals())
 
+def display_meta(request) :
+    values = request.META.items()
+    values.sort()
+    return render_to_response("index.html", locals())
