@@ -5,6 +5,7 @@ admin.autodiscover()
 
 from mysite.views import hello, current_time, hours_ahead, display_meta
 from mysite.books import views
+from mysite.contact.views import contact
 
 urlpatterns = patterns('',
     # Examples:
@@ -17,5 +18,6 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^$', display_meta),
     (r'^search/$', views.search),
+    (r'^contact/$', contact),
 )
 
