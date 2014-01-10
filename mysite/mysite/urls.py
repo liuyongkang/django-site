@@ -16,7 +16,6 @@ urlpatterns = patterns('',
     (r'^time/plus/(\d{1,2})/$', hours_ahead),
     (r'^admin/', include(admin.site.urls)),
     (r'^$', display_meta),
-    (r'^search_form/$', views.search_form),
     (r'^search/$', views.search),
 )
 
